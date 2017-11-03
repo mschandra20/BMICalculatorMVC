@@ -1,0 +1,40 @@
+﻿@model BMIcalculater.Models.BMIForm
+@{
+    ViewBag.Title = "Home Page";
+}
+<form>
+    <div class="form text-center well">
+        <div class="name">
+                @Html.LabelFor(a => a.Name)
+                @Html.TextBoxFor(a => a.Name)
+        </div>
+
+        <div class="name">
+                @Html.LabelFor(a => a.Gender)
+                @Html.RadioButtonFor(a => a.Gender.Male, "Male") Male
+                @Html.RadioButtonFor(a => a.Gender.Female, "Female") Female
+        </div>
+
+        <div class="name">
+                @Html.LabelFor(a => a.FeetHeight, "Feet")
+                @Html.TextBoxFor(a => a.FeetHeight)
+        </div>
+        <div class="name">
+
+                @Html.LabelFor(a => a.InchHeight, "Inches")
+                @Html.TextBoxFor(a => a.InchHeight)            
+        </div>
+        <div class="name">
+
+                @Html.LabelFor(a => a.Weight)
+                @Html.TextBoxFor(a => a.Weight)
+
+        </div>
+        <button class="btn btn-default place">Calculate BMI</button>
+        <div>
+            @Model.BMI
+               
+            
+        </div>
+    </div>
+</form>
